@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import styles from './App.module.css';
+import logo from "./logo.svg";
+import styles from "./App.module.css";
+
+import { For, createSignal } from "solid-js";
+import { TodoListItem } from "./TodoListItem";
 
 function App() {
+  const [todos, setTodos] = createSignal([
+    { text: "Walk the dosg", complete: false },
+    { text: "Do homework", complete: true },
+  ]);
+
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
+    <ul>
+      <For each={todos()}>{(todo) => <TodoListItem todo={todo} />}</For>
+    </ul>
   );
 }
 
