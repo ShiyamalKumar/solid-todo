@@ -1,6 +1,11 @@
 .App {
   text-align: center;
   font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
 }
 
 .logo {
@@ -10,18 +15,17 @@
 }
 
 .header {
-  background-color: #4A5568; /* A dark gray-blue for contrast */
-  min-height: 100vh;
+  background-color: #4A5568;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #F7FAFC; /* A light color for text */
+  width: 100%;
+  color: #F7FAFC;
 }
 
 .link {
-  color: #63B3ED; /* A soft blue for links */
+  color: #63B3ED;
 }
 
 @keyframes logo-spin {
@@ -34,9 +38,10 @@
 }
 
 .filters {
-  margin-bottom: 20px;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .filters button {
@@ -45,15 +50,44 @@
   cursor: pointer;
   border: none;
   border-radius: 20px;
-  background-color: #E2E8F0; /* A light gray */
-  color: #2D3748; /* Dark gray for text */
+  background-color: #E2E8F0;
+  color: #2D3748;
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
 .filters button:hover, .filters button:focus {
-  background-color: #A0AEC0; /* A medium gray for hover */
-  color: #F7FAFC; /* White for hover text */
+  background-color: #A0AEC0;
+  color: #F7FAFC;
+}
+
+.taskInputContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.newTaskInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px; 
+  margin-right: 10px;
+}
+
+.addButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #63B3ED;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addButton:hover {
+  background-color: #4299E1;
 }
 
 ul {
@@ -61,17 +95,18 @@ ul {
   padding: 0;
   margin: 20px auto;
   max-width: 600px;
-  text-align: left;
+  width: 100%;
 }
 
 li {
-  background-color: #F7FAFC; /* Light background for list items */
+  background-color: #F7FAFC;
   margin-bottom: 8px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 li label {
@@ -84,8 +119,10 @@ li input[type="checkbox"] {
 }
 
 input[type="checkbox"] {
-  accent-color: #63B3ED; /* Soft blue for checkbox */
+  accent-color: #63B3ED;
 }
 .main{
-  margin: 80px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
