@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
 .logo {
@@ -9,18 +10,18 @@
 }
 
 .header {
-  background-color: #282c34;
+  background-color: #4A5568; /* A dark gray-blue for contrast */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #F7FAFC; /* A light color for text */
 }
 
 .link {
-  color: #b318f0;
+  color: #63B3ED; /* A soft blue for links */
 }
 
 @keyframes logo-spin {
@@ -30,4 +31,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.filters button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: #E2E8F0; /* A light gray */
+  color: #2D3748; /* Dark gray for text */
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.filters button:hover, .filters button:focus {
+  background-color: #A0AEC0; /* A medium gray for hover */
+  color: #F7FAFC; /* White for hover text */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+li {
+  background-color: #F7FAFC; /* Light background for list items */
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+
+li label {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  accent-color: #63B3ED; /* Soft blue for checkbox */
+}
+.main{
+  margin: 80px;
 }
